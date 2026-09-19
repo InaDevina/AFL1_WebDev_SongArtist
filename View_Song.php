@@ -46,6 +46,16 @@
                   <button class="btn btn-danger">Delete</button>
                 </td>
               </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Treat You Better</td>
+                <td>Shawn Mendes</td>
+                <td>2016</td>
+                <td>
+                  <button class="btn btn-warning">Update</button>
+                  <button class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
