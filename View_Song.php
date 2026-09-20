@@ -1,3 +1,4 @@
+<?php require("Controller_Song.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,31 +37,32 @@
               </tr>
             </thead>
             <tbody>
+              <?php 
+              $counter = 0;
+              $allSong = getAllSong();
+              foreach ($allSong as $index => $song) {
+                $counter++;
+              ?>
+
               <tr>
-                <th scope="row">1</th>
-                <td>All To Well</td>
-                <td>Taylor Swift</td>
-                <td>2012</td>
+                <th scope="row"><?=$counter?></th>
+                <td><?=$song->title?></td>
+                <td><?=$song->artist?></td>
+                <td><?=$song->year?></td>
                 <td>
                   <button class="btn btn-warning">Update</button>
                   <button class="btn btn-danger">Delete</button>
                 </td>
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Treat You Better</td>
-                <td>Shawn Mendes</td>
-                <td>2016</td>
-                <td>
-                  <button class="btn btn-warning">Update</button>
-                  <button class="btn btn-danger">Delete</button>
-                </td>
-              </tr>
+
+              <?php  
+              }
+              ?>
+              
             </tbody>
           </table>
         </div>
       </div>
     </div>
 </body>
-
 </html>

@@ -25,31 +25,31 @@
       <div class="card-body">
 
         <h1 class="mb-5">Add Song</h1>
-        <form class="row g-3">
+        <form method="POST" action="Controller_Song.php" class="row g-3">
 
           <div class="row">
             <div class="col-md-12 mb-3">
               <label for="inputTitle" class="form-label mb-2">Song Title</label>
-              <input type="email" class="form-control" id="inputTitle">
+              <input type="text" class="form-control" name="inputTitle">
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-12 mb-3">
               <label for="inputArtist" class="form-label mb-2">Artist Name</label>
-              <input type="text" class="form-control" id="inputArtist" placeholder="">
+              <input type="text" class="form-control" name="inputArtist" placeholder="">
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-12 mb-3">
               <label for="inputYear" class="form-label mb-2">Year Published</label>
-              <input type="text" class="form-control" id="inputYear" placeholder="">
+              <input type="text" class="form-control" name="inputYear" placeholder="">
             </div>
           </div>
 
           <div class="col-12">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button name="button_add" type="submit" class="btn btn-primary">ADD</button>
           </div>
         </form>
 
