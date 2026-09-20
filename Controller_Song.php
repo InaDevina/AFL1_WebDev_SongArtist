@@ -20,10 +20,19 @@ function getAllSong(){
     return $_SESSION['songlist'];
 }
 
+function deleteSong($songIndex){
+    unset($_SESSION['songlist'][$songIndex]); //array index = 0,1,2,dst..
+}
 
 //jika button add di klik
 if(isset($_POST['button_add'])){
     createSong();
+    header("Location:View_Song.php");//kembali ke halaman lain
+}
+
+//jika button delete di klik
+if(isset($_GET['deleteID'])){
+    deleteSong($_GET['deleteID']);
     header("Location:View_Song.php");//kembali ke halaman lain
 }
 

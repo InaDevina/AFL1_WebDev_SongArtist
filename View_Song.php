@@ -17,7 +17,7 @@
         <div class="card-header">
           <ul class="nav nav-tabs card-header-tabs">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="true" href="View_Song.php">View Song</a>
+              <a class="nav-link active" aria-current="true" href="View_Song.php">Song List</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="View_addSong.php">Add Song</a>
@@ -51,7 +51,9 @@
                 <td><?=$song->year?></td>
                 <td>
                   <button class="btn btn-warning">Update</button>
-                  <button class="btn btn-danger">Delete</button>
+                  <a href="Controller_Song.php?deleteID=<?=$index?>">
+                    <button class="btn btn-danger">Delete</button>
+                  </a>
                 </td>
               </tr>
 
